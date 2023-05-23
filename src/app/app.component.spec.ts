@@ -20,10 +20,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ngrx-example'`, () => {
+  it(`taskForm invalid when empty 'ngrx-example'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ngrx-example');
+    expect(app.taskForm.valid).toBeFalsy();
   });
 
   it('should render title', () => {

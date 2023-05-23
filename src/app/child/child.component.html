@@ -1,0 +1,9 @@
+<hr>
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <h3>Child component</h3>
+        <div *ngIf="taskName$ | async as n">
+            <p>note: {{ n | json }}</p>
+        </div>
+    </div>
+</div>

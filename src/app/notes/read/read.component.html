@@ -1,0 +1,16 @@
+<table class="table table-hover" *ngIf="notes">
+    <thead>
+        <tr>
+            <td>Note title</td>
+            <td>Title value</td>
+            <td>Deletw note</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let  n of notes | async; let i = index">
+            <td>{{n.title}}</td>
+            <td>{{n.value}}</td>
+            <td><button (click)="delNote(i)" class="btn btn-danger">Delete the note Index: {{i}}</button></td>
+        </tr>
+    </tbody>
+</table>
